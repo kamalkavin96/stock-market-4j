@@ -6,6 +6,8 @@ rm -rf target/
 
 cd ..
 
+git stash
+
 git pull
 
 cd historicdata/
