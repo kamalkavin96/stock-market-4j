@@ -9,7 +9,6 @@ import com.kamalkavin96.historicdata.model.Candle;
 import com.kamalkavin96.historicdata.model.Quote;
 
 import java.time.Instant;
-import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
@@ -68,6 +67,8 @@ public class GrowwService {
                 .queryParam("intervalInMinutes", intervalMinutes)
                 .buildAndExpand(symbol.toUpperCase())
                 .toUriString();
+
+        System.out.println(url);
 
         Map<String, Object> response;
         try {
