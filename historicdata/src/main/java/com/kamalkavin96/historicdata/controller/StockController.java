@@ -44,4 +44,12 @@ public class StockController {
     public ResponseEntity<Quote> getQuotes(@PathVariable String symbol) {
         return ResponseEntity.ok(growwService.getQuotes(symbol));
     }
+
+    @GetMapping("/{symbol}/latest")
+    public List<Quote> getLatest(
+            @PathVariable String symbol,
+            @RequestParam String interval,
+            @RequestParam(defaultValue = "2") int limit) {
+        return growwService.getLatestCandles(symbol, interval, limit);
+    }
 }

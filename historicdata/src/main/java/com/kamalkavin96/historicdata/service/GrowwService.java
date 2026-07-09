@@ -108,4 +108,9 @@ public class GrowwService {
         String unit = matcher.group(2);
         return (long) value * INTERVAL_MINUTES.get(unit);
     }
+
+    public List<Quote> getLatestCandles(String symbol, String interval, int limit) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getLatestCandles'");
+    }
 }
